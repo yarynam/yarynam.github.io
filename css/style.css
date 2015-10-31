@@ -1,0 +1,80 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+    font-size: 100%;
+    color: #383e47;
+    background: #fff;
+    width: 100%;
+    /*footer height plus padding*/
+    margin-bottom: 200px;
+}
+
+
+h1{
+   font-weight: 700;
+   margin-top: 1em;
+   font-family: 'Inconsolata';
+}
+
+.project_title{
+    font-family: Open Sans, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+a {
+    color: #383e47;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.3em;
+    font-family: 'Inconsolata';
+}
+
+section {
+    padding-bottom: 7em;
+}
+
+img.fadeinblock {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+img.fadeinblock:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+div.randomRect {
+width: 10px;
+height:10px;
+ background-color:red;
+position:fixed;
+    
+}
+
+
+.main{
+    padding-right: 2%;
+}
+
+
+
+.project_title {
+    margin-bottom: 5em;
+}
+   
+.project_title:hover {
+    font-weight: 600;
+    color:#383e47;
+}
