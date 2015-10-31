@@ -68,13 +68,6 @@ position:fixed;
     padding-right: 2%;
 }
 
-
-
 .project_title {
     margin-bottom: 5em;
-}
-   
-.project_title:hover {
-    font-weight: 600;
-    color:#383e47;
 }
