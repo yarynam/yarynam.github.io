@@ -154,12 +154,14 @@ function animateDiv(){
 
     var newq = makeNewPosition();
 
-    $(this).animate({top: newq[0], left: newq[1] },2000, function(){
-      animateDiv();        
-    });
+    $(this).animate({top: newq[0], left: newq[1] },slow, function(){
+ });
     });
     
 };
+
+animateDiv();
+animateDiv();
 
 
 
