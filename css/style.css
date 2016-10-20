@@ -16,7 +16,6 @@ body {
 
 h1{
    font-weight: 700;
-   margin-top: 1em;
    font-family: 'Inconsolata';
 }
 
@@ -25,6 +24,10 @@ h1{
     font-size: 1.3em;
     text-align: center;
     padding-top: 1em;
+}
+
+.center {
+    text-align: center;
 }
 
 a {
@@ -55,13 +58,6 @@ img.fadeinblock:hover {
     filter: grayscale(0%);
 }
 
-div.randomRect {
-width: 10px;
-height:10px;
-background-color:#3A3F4A;
-position:fixed;
-    
-}
 
 
 .main{
@@ -70,4 +66,51 @@ position:fixed;
 
 .project_title {
     margin-bottom: 5em;
+}
+
+
+.svg-container {
+display: block;
+position: relative;
+max-height: 200px;
+width: 100%;
+margin:auto;
+padding-bottom: 20%;
+vertical-align: middle;
+overflow: hidden;
+}
+
+
+.svg-content {
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+
+/* === LINE ANIMATION === */
+
+polygon, path, rect{
+  stroke: #383e47; /*creates stroke*/
+  stroke-width: 3px; /*sets stroke width*/
+  stroke-dasharray: 700;  /*creates dashes. Basically 1700 means one big dash which covers the whole path*/
+  stroke-dashoffset: 700; /*controls the position of dashes. We are offsetting the path with the same pixel value*/
+  animation: offset 12s linear forwards; /* forwards instructs the browser to end the animation on its final keyframe and it's better to use it for line animation, so when it ends, it won't reset back to the start value*/
+}
+
+/* keyframes to animate the line */
+@keyframes offset {
+  100% { stroke-dashoffset: 0; }
+}
+
+
+circle {
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+  0% { opacity:0; }
+  50% { opacity:0.5; }
+  100% { opacity:1; }
 }
