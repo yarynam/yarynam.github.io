@@ -48,17 +48,14 @@ section {
     padding-bottom: 7em;
 }
 
-img.fadeinblock {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+.col-lg-4 {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-img.fadeinblock:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
+div span:hover {
+  background: rgba(255, 0, 0, 0.5);
 }
-
-
 
 .main{
     padding-right: 2%;
