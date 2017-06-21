@@ -232,7 +232,7 @@ circle {
   .projects { width:60%;}
   .header { width:20%; margin-bottom: 5em;}
    h1 {font-size: 42px; }
-   .project_title, p { font-size: 18px;}
+   .project_title, p {font-size: 18px;}
 }
 
 @media only screen and (min-width: 1024px) {
