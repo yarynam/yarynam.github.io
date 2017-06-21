@@ -9,18 +9,40 @@ body {
     color: #383e47;
     background: #fff;
     width: 100%;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
+
+
+.projects {
+  display: flex;
+  width:80%;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.item {
+   flex: 1 300px;
+   padding: 10px;
+}
+
+
+.header {
+  width:85%;
+  margin:auto;
+  margin-bottom: 3em;
+}
 
 h1{
    font-weight: 700;
    font-family: 'Inconsolata';
+   margin-top: 10px;
 }
 
 .project_title{
     font-family: Open Sans, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-align: center;
     padding-top: 1em;
 }
@@ -39,18 +61,11 @@ a:link {
 }
 
 p {
-    font-size: 1.35em;
+    font-size: 14px;
     font-family: 'Inconsolata';
 }
 
-section {
-    padding-bottom: 7em;
-}
 
-
-.main{
-    padding-right: 2%;
-}
 
 .project_title {
     font-family: 'Inconsolata';
@@ -210,3 +225,18 @@ circle {
   50% { opacity:0.5; }
   100% { opacity:1; }
 }
+
+
+
+@media only screen and (min-width: 1670px) {
+  .projects { width:60%;}
+  .header { width:20%; margin-bottom: 5em;}
+   h1 {font-size: 42px; }
+   .project_title, p { font-size: 18px;}
+}
+
+@media only screen and (min-width: 1024px) {
+  .header { width:30%; margin-bottom: 5em;}
+}
+
+
