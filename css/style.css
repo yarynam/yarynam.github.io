@@ -1,0 +1,242 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+    font-size: 100%;
+    color: #383e47;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+
+
+.projects {
+  display: flex;
+  width:80%;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.item {
+   flex: 1 300px;
+   padding: 10px;
+}
+
+
+.header {
+  width:85%;
+  margin:auto;
+  margin-bottom: 3em;
+}
+
+h1{
+   font-weight: 700;
+   font-family: 'Inconsolata';
+   margin-top: 10px;
+}
+
+.project_title{
+    font-family: Open Sans, sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: #383e47;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Inconsolata';
+}
+
+
+
+.project_title {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    margin-bottom: 5em;
+    font-size: 14px;
+
+}
+
+.svg-container {
+display: block;
+position: relative;
+max-height: 200px;
+width: 100%;
+margin:auto;
+padding-bottom: 20%;
+vertical-align: middle;
+overflow: hidden;
+}
+
+.svg-content {
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+/* === Caption styles === */
+
+figure.project {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+}
+figure.project * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.project img {
+  max-width: 100%;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.project figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 5em;
+  width: 100%;
+  height: 100%;
+}
+figure.project figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 100%;
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.project h2,
+figure.project p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.project h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(30%, 0%, 0);
+  transform: translate3d(30%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.project h2 span {
+  font-weight: 800;
+}
+figure.project p {
+  font-weight: 200;
+  -webkit-transform: translate3d(0%, 30%, 0);
+  transform: translate3d(0%, 30%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.project a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.project:hover img {
+  opacity: 0.3;
+}
+figure.project:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.project:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.project:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* === LINE ANIMATION === */
+
+polygon, path, rect{
+  stroke: #383e47; /*creates stroke*/
+  stroke-width: 3px; /*sets stroke width*/
+  stroke-dasharray: 700;  /*creates dashes. Basically 1700 means one big dash which covers the whole path*/
+  stroke-dashoffset: 700; /*controls the position of dashes. We are offsetting the path with the same pixel value*/
+  animation: offset 12s linear forwards; /* forwards instructs the browser to end the animation on its final keyframe and it's better to use it for line animation, so when it ends, it won't reset back to the start value*/
+}
+
+/* keyframes to animate the line */
+@keyframes offset {
+  100% { stroke-dashoffset: 0; }
+}
+
+
+circle {
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+  0% { opacity:0; }
+  50% { opacity:0.5; }
+  100% { opacity:1; }
+}
+
+
+
+@media only screen and (min-width: 1670px) {
+  .projects { width:60%;}
+  .header { width:20%; margin-bottom: 5em;}
+   h1 {font-size: 42px; }
+   .project_title, p {font-size: 18px;}
+}
+
+@media only screen and (min-width: 1024px) {
+  .header { width:30%; margin-bottom: 5em;}
+}
+
+
